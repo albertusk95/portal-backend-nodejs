@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title><%=(page_title) ? page_title :''%></title>
+	<style>
+		.data-table {
+			margin-left: 550px;
+			margin-top: 200px;
+		}
+	</style>
+</head>
+<body>
+	<div class="page-data">
+		<div class="data-table">
+			<form action="/saveedit" method="GET">
+				<table border="1" cellpadding="7" cellspacing="7">
+					<tr>
+						<th colspan=2>Edit category</th>
+					</tr>                               
+					<tr>
+						<td>Name:</td>
+						<td>
+							<input type="text" name="editCategory_name" value="<%= name %>" />
+						</td>
+					</tr>
+					
+					<input type="hidden" name="editCategory_id" value="<%= id %>" />
+						
+					<tr>
+						<td colspan=2 style="text-align: center">
+							<input type="submit" value="Save" />
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</div>        
+</body>
+</html>

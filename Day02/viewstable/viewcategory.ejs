@@ -1,0 +1,47 @@
+<html>
+<head>
+	<title><%=(page_title) ? page_title :''%></title>
+	<style>
+		.data-table {
+			margin-left: 550px;
+			margin-top: 150px;
+		}
+		.data-add {
+			margin-left: 550px;
+			margin-top: 35px;
+		}
+	</style>
+</head>
+<body>
+		<div class="page-data">
+			<div class="data-table">
+				<table border="1" cellpadding="7" cellspacing="7">
+					<tr>
+						<th width="50px">No</th>
+						<th>Name</th>
+						<th>Action</th>
+					</tr>                               
+					<% if(data.length){ 
+									
+					 for(var i = 0;i < data.length;i++) { %>                 
+					<tr>
+						<td><%=i+1%></td>
+						<td><%=data[i].name%></td>
+						<td>
+							<a href="/delete?id=<%= data[i].id %>&category=<%= data[i].name %>">delete</a>
+							<b>|</b>
+							<a href="/edit?id=<%= data[i].id %>&category=<%= data[i].name %>">edit</a>
+						</td>
+					</tr>
+
+					<% }} %>
+																 
+				</table>
+			</div>
+			
+			<div class="data-add">
+				<a href="/add">Add category</a>
+			</div>
+		</div>        
+</body>
+</html>

@@ -1,0 +1,7 @@
+LAYOUT
+No	Name		Action
+1	Computer		delete, edit
+2	Phone		delete, edit
+3	...		
+
+Buat route utk delete dan edit
